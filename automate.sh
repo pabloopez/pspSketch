@@ -1,4 +1,5 @@
 #!/bin/bash
+# from git clone https://github.com/pabloopez/pspSketch.git
 
 #this script is a sketch on how to configure the cluster and install
 #sysdig-agent for training porpouse at katacoda. needs reviewing.
