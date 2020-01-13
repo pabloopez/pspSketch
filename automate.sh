@@ -5,10 +5,10 @@
 #sysdig-agent for training porpouse at katacoda. needs reviewing.
 #pablopez 2020
 
-kubectl get pods --A
+kubectl get pods -A
 
 #we'll need to clean this files, we don't need all of them 
-git clone https://github.com/pabloopez/pspSketch.git
+#git clone https://github.com/pabloopez/pspSketch.git
 
 
 mkdir /etc/kubernetes/policies
@@ -17,7 +17,7 @@ mv ./audit-policy.yaml /etc/kubernetes/policies/audit-policy.yaml
 mv ./kube-apiserver.yaml /etc/kubernetes/manifests/kube-apiserver.yaml
 
 #cluster should restart automatically, check with
-kubectl get pods --A
+kubectl get pods -A
 
 curl -fsSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 helm version
