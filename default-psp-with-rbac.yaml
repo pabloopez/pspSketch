@@ -37,14 +37,14 @@ spec:
   - 'projected'
   - 'secret'
   hostNetwork: false
-  runAsUser:
-    rule: 'RunAsAny'
-  seLinux:
-    rule: 'RunAsAny'
-  supplementalGroups:
-    rule: 'RunAsAny'
-  fsGroup:
-    rule: 'RunAsAny'
+#  runAsUser:
+#    rule: 'RunAsAny'
+#  seLinux:
+#    rule: 'RunAsAny'
+#  supplementalGroups:
+#    rule: 'RunAsAny'
+#  fsGroup:
+#    rule: 'RunAsAny'
 
 ---
 
