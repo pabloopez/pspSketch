@@ -12,9 +12,10 @@ kubectl get pods -A
 
 
 mkdir /etc/kubernetes/policies
-mv ./audit-policy.yaml /etc/kubernetes/policies/audit-policy.yaml
+mv /root/pspSketch/audit-policy.yaml /etc/kubernetes/policies/audit-policy.yaml
 
-mv ./kube-apiserver.yaml /etc/kubernetes/manifests/kube-apiserver.yaml
+rm /etc/kubernetes/manifests/kube-apiserver.yaml
+mv /root/pspSketch/kube-apiserver.yaml /etc/kubernetes/manifests/kube-apiserver.yaml
 
 #cluster should restart automatically, check with
 kubectl get pods -A
