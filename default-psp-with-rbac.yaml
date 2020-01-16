@@ -22,12 +22,16 @@ spec:
   runAsUser:
     rule: 'MustRunAsNonRoot'
   seLinux:
-    rule: 'RunAsNonRoot'
-  supplementalGroups:
-    rule: 'RunAsNonRoot'
+    rule: 'MustRunAs'
     ranges:
       # Forbid adding the root group.
-      - min: 1
+      - min: 1000
+        max: 65535
+  supplementalGroups:
+    rule: 'MustRunAs'
+    ranges:
+      # Forbid adding the root group.
+      - min: 1000
         max: 65535
   volumes:
   - 'configMap'
@@ -37,14 +41,6 @@ spec:
   - 'projected'
   - 'secret'
   hostNetwork: false
-#  runAsUser:
-#    rule: 'RunAsAny'
-#  seLinux:
-#    rule: 'RunAsAny'
-#  supplementalGroups:
-#    rule: 'RunAsAny'
-#  fsGroup:
-#    rule: 'RunAsAny'
 
 ---
 
